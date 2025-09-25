@@ -147,22 +147,23 @@ public class PinBekero extends javax.swing.JFrame {
     
     private void chbMutatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chbMutatActionPerformed
         if(chbMutat.isSelected()){
-            for (int i = 0; i < pin.length(); i++) {
-                int gomb = Integer.parseInt(pin.charAt(i)+"");
-                jPanel1.getComponent(gomb).setBackground(Color.red);
-            }
+            szinesit(Color.RED);
         }else{
             chbMutat.setEnabled(false);
             kattDb = 0;
-            for (int i = 0; i < pin.length(); i++) {
-                int gomb = Integer.parseInt(pin.charAt(i)+"");
-                jPanel1.getComponent(gomb).setBackground(Color.LIGHT_GRAY);
-            }
+            szinesit(Color.GRAY);
             // szerintem ez volt a hiba
             pin = "";
         }
     }//GEN-LAST:event_chbMutatActionPerformed
 
+    public void szinesit(Color szin){
+        for (int i = 0; i < pin.length(); i++) {
+                int gomb = Integer.parseInt(pin.charAt(i)+"");
+                jPanel1.getComponent(gomb).setBackground(szin);
+            }
+    }
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
