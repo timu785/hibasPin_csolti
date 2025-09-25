@@ -126,11 +126,11 @@ public class PinBekero extends javax.swing.JFrame {
                         kattDb++;
                         pin += e.getActionCommand();
                     } 
-                    if(kattDb == 4) {
+                    if (kattDb == 4) {
                         chbMutat.setEnabled(true);
                         try {
                             Files.writeString(eleresiUt, pin);
-                            JOptionPane.showMessageDialog(rootPane, "Pin mentve!");
+                            kiir("Pin mentve!");
                         } catch (IOException f) {
                             f.printStackTrace();
                         }   
@@ -141,6 +141,10 @@ public class PinBekero extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_formWindowOpened
 
+    public void kiir(String uzenet){
+        JOptionPane.showMessageDialog(rootPane, uzenet);
+    }
+    
     private void chbMutatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chbMutatActionPerformed
         if(chbMutat.isSelected()){
             for (int i = 0; i < pin.length(); i++) {
