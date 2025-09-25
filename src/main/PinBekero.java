@@ -144,6 +144,8 @@ public class PinBekero extends javax.swing.JFrame {
                 int gomb = Integer.parseInt(pin.charAt(i)+"");
                 jPanel1.getComponent(gomb).setBackground(Color.LIGHT_GRAY);
             }
+            // szerintem ez volt a hiba
+            pin = "";
         }
     }//GEN-LAST:event_chbMutatActionPerformed
 
